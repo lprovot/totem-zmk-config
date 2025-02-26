@@ -7,9 +7,11 @@ include:
     shield: totem_right
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-# Add custom dongle and a peripheral left corne
+# Add custom dongle and enable ZMK Studio
   - board: seeeduino_xiao_ble
     shield: totem_dongle
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
